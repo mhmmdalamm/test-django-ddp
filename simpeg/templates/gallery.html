@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        .nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav a {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Gallery Nurul Fikri</h1>
+    <hr>
+    <div class="nav">
+        <a href="{% url 'home' %}">home</a>
+        <a href="{% url 'about' %}">about</a>
+        <a href="{% url 'gallery' %}">gallery</a>
+    </div>
+    <hr>
+    <br>
+    <h2>Gallery</h2>
+    <br>
+    <p>
+        {% load static %}
+        <marquee behavior="" direction="">
+            <img src="{% static 'images/1.png' %}" width="400px" />
+            <img src="{% static 'images/2.png' %}" width="400px" />
+            <img src="{% static 'images/3.png' %}" width="400px" />
+        </marquee>
+    </p>
+</body>
+</html>
